@@ -1,7 +1,7 @@
 
 # What Recurrence Can and Cannot Remember
 
-AIGC5500 - Lab 04
+Recurrent Neural Networks: Performance and Gradient Analysis
 
 ## Task
 Compare RNN, LSTM and GRU models on a delayed-recall task.
