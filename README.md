@@ -25,6 +25,38 @@ The analysis focuses on:
 The objective is to understand the strengths and limitations of
 recurrent architectures through controlled experiments.
 
+## Experimental Methodology
+
+The experiments use a synthetic delayed-recall classification task with
+four possible classes. The class information appears at the first time
+step, while subsequent steps contain noise. The model predicts the
+original class at the final time step.
+
+Chance-level classification accuracy is 25%.
+
+### Benchmark Configuration
+
+- Architectures: RNN, LSTM and GRU
+- Sequence lengths: 10, 30 and 60
+- Random seeds: 0, 1 and 2
+- Gate initialization: PyTorch default and gate bias 3
+- Evaluation metric: Validation accuracy
+
+The benchmark uses the same data generation procedure, model training
+settings and evaluation protocol across configurations to support
+controlled comparisons.
+
+### Gradient Analysis
+
+Input-gradient norms are measured across 60 time steps using:
+
+- Hidden size: 32
+- Batch size: 16
+- Input features: 8
+- Five random seeds
+- Median gradient norm across seeds
+- Logarithmic scale for visualization
+
 ## Prediction (written before clipping experiment)
 
 I predict that gradient clipping will not significantly improve
