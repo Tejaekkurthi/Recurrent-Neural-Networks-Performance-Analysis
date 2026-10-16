@@ -1,10 +1,29 @@
 
-# What Recurrence Can and Cannot Remember
+# Recurrent Neural Networks: Performance and Gradient Analysis
 
-Recurrent Neural Networks: Performance and Gradient Analysis
+## Project Overview
 
-## Task
-Compare RNN, LSTM and GRU models on a delayed-recall task.
+This project investigates how recurrent neural networks learn and retain
+information across sequences of different lengths using PyTorch.
+
+Three recurrent architectures are evaluated:
+- Recurrent Neural Network (RNN)
+- Long Short-Term Memory (LSTM)
+- Gated Recurrent Unit (GRU)
+
+The experiments use a delayed-recall classification task where the
+class label is presented at the beginning of a sequence and must be
+predicted at the final time step.
+
+The analysis focuses on:
+- Model accuracy across different sequence lengths
+- Vanishing gradients and gradient propagation through time
+- Forget-gate and update-gate bias initialization
+- The effect of gradient clipping
+- Computational cost as sequence length increases
+
+The objective is to understand the strengths and limitations of
+recurrent architectures through controlled experiments.
 
 ## Prediction (written before clipping experiment)
 
